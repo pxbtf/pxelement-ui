@@ -3,8 +3,8 @@ import type { App, Plugin } from "vue";
 const components = [Button];
 
 const install = (app: App) => {
-  components.forEach((component) => {
-    app.component(component.name, component);
+  components.forEach((component: any) => {
+    app.component(component.name as string, component);
   });
 };
 
