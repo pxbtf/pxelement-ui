@@ -1,5 +1,4 @@
 packages:
   - packages/*
-  - documents
   - examples
   - "!**/test/**"

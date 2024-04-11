@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "dev": "pnpm -C examples dev",
-    "test": "pnpm -C packages/components test"
+    "test": "pnpm -C packages/components test",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
   },
   "keywords": [],
   "author": "",
@@ -18,9 +21,12 @@
     "@vitejs/plugin-vue": "^5.0.4",
     "@vue/test-utils": "^2.4.5",
     "@vue/tsconfig": "^0.5.1",
+    "@vueuse/core": "^10.9.0",
+    "element-plus": "^2.6.3",
     "jsdom": "^24.0.0",
     "sass": "^1.74.1",
     "typescript": "^5.4.4",
+    "vitepress": "^1.1.0",
     "vitest": "^1.4.0",
     "vue": "^3.4.21"
   }

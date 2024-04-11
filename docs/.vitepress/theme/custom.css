@@ -1,0 +1,9 @@
+/* .vitepress/theme/custom.css */
+:root {
+  --vp-c-brand-1: #409eff;
+  --vp-c-brand-2: #409effc9;
+  --vp-c-indigo-3: #409eff;
+}
+.title {
+  font-size: 18px !important;
+}
