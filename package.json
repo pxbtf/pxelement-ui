@@ -8,7 +8,8 @@
     "test": "pnpm -C packages/components test",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs"
+    "docs:preview": "vitepress preview docs",
+    "docs:deploy": "bash ./.vitepress/scripts/deploy.sh"
   },
   "keywords": [],
   "author": "",
