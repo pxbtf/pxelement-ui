@@ -1,23 +1,20 @@
 import { defineConfig } from "vitepress";
 
-// https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "pxElement",
-  description: "vue3组件库",
+  description: "基于vue3开发的组件库",
   themeConfig: {
-    // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: "Home", link: "/" },
-      { text: "component", link: "/components/index" },
-      { text: "Examples", link: "/markdown-examples" },
+      { text: "指南", link: "/install" },
+      { text: "组件", link: "/components/index" },
     ],
     logo: "",
     sidebar: [
       {
         text: "开发指南",
         items: [
-          { text: "Markdown Examples", link: "/markdown-examples" },
-          { text: "Runtime API Examples", link: "/api-examples" },
+          { text: "安装", link: "/install" },
+          { text: "快速开始", link: "/quick-start" },
         ],
       },
       {
