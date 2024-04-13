@@ -7,7 +7,30 @@
     "test": "vitest",
     "build": "vite build"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "license": "MIT",
+  "keywords": [
+    "pxelement",
+    "ui"
+  ],
+  "files": [
+    "/dist"
+  ],
+  "exports": {
+    ".": {
+      "require": "./dist/pxElement.mjs",
+      "import": "./dist/pxElement.js"
+    },
+    "./amd": {
+      "require": "./dist/pxElement.amd.js"
+    }
+  },
+  "author": {
+    "name": "pxbtf",
+    "email": "pxiou1997@163.com",
+    "url": "https://github.com/pxbtf"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pxbtf/pxelement-ui"
+  }
 }
