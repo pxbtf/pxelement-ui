@@ -38,7 +38,7 @@
         </div>
         <!-- 测试 circle 属性 -->
         <div class="row">
-            <px-button round circle>好</px-button>
+            <pxbutton round circle>好</pxbutton>
             <px-button round circle type="primary">好</px-button>
             <px-button round circle type="success">学</px-button>
             <px-button plain round circle type="info">习</px-button>

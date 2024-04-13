@@ -5,7 +5,9 @@
     "src/**/*",
     "src/**/*.vue",
     "packages/components/**/*.ts",
-    "packages/components/**/*.vue"
+    "packages/components/**/*.vue",
+    "packages/theme-chalk/**/*.ts",
+    "packages/theme-chalk/script/build/gulpfile.js",
   ],
   "exclude": [
     "src/**/__tests__/*"
@@ -14,6 +16,7 @@
     "composite": true,
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
     "baseUrl": ".",
+    "esModuleInterop": true,
     "paths": {
       "@/*": [
         "./src/*"

@@ -4,9 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "sass ./src/index.scss:index.css",
+    "start": "gulp --require @esbuild-kit/cjs-loader script/build/gilpfile.ts"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@esbuild-kit/cjs-loader": "^2.4.4"
+  }
 }
