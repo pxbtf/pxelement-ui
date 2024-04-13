@@ -14,9 +14,20 @@
     "docs:preview": "vitepress preview docs",
     "docs:deploy": "bash ./docs/scripts/deploy.sh"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "pxelement",
+    "ui"
+  ],
+  "author": {
+    "name": "pxbtf",
+    "email": "pxiou1997@163.com",
+    "url": "https://github.com/pxbtf"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pxbtf/pxelement-ui"
+  },
+  "license": "MIT",
   "devDependencies": {
     "@esbuild-kit/cjs-loader": "^2.4.4",
     "@pxelement-ui/components": "workspace:^",
