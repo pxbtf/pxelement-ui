@@ -57,7 +57,7 @@
         </div>
         <!-- 测试事件 -->
         <div class="row">
-            <px-button type="primary" plain @click="handleClick('pxElement')">click</px-button>
+            <px-button type="primary" plain @click="handleClick('pxelement')">click</px-button>
         </div>
     </div>
 </template>

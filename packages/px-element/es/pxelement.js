@@ -1,4 +1,5 @@
-import { defineComponent, openBlock, createElementBlock, normalizeClass, createCommentVNode, renderSlot } from "vue";
+"use strict";
+const vue = require("vue");
 const buttonProps = {
   type: {
     type: String,
@@ -25,8 +26,8 @@ const buttonProps = {
     default: ""
   }
 };
-const _sfc_main = defineComponent({
-  name: "pxbutton",
+const _sfc_main = vue.defineComponent({
+  name: "pxButton",
   props: buttonProps,
   emits: ["click"],
   setup(_, { emit }) {
@@ -48,18 +49,18 @@ const _export_sfc = (sfc, props) => {
 const _hoisted_1 = ["disabled"];
 const _hoisted_2 = { key: 1 };
 function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
-  return openBlock(), createElementBlock("button", {
-    class: normalizeClass(["pxui-button", [`pxui-button-${_ctx.type}`, { "is-plain": _ctx.plain, "is-round": _ctx.round, "is-circle": _ctx.circle, "is-disabled": _ctx.disabled }]]),
+  return vue.openBlock(), vue.createElementBlock("button", {
+    class: vue.normalizeClass(["pxui-button", [`pxui-button-${_ctx.type}`, { "is-plain": _ctx.plain, "is-round": _ctx.round, "is-circle": _ctx.circle, "is-disabled": _ctx.disabled }]]),
     disabled: _ctx.disabled,
     onClick: _cache[0] || (_cache[0] = (...args) => _ctx.clickHandle && _ctx.clickHandle(...args))
   }, [
-    _ctx.icon ? (openBlock(), createElementBlock("i", {
+    _ctx.icon ? (vue.openBlock(), vue.createElementBlock("i", {
       key: 0,
-      class: normalizeClass(`pxui-icon-${_ctx.icon}`)
-    }, null, 2)) : createCommentVNode("", true),
-    _ctx.$slots.default ? (openBlock(), createElementBlock("span", _hoisted_2, [
-      renderSlot(_ctx.$slots, "default")
-    ])) : createCommentVNode("", true)
+      class: vue.normalizeClass(`pxui-icon-${_ctx.icon}`)
+    }, null, 2)) : vue.createCommentVNode("", true),
+    _ctx.$slots.default ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_2, [
+      vue.renderSlot(_ctx.$slots, "default")
+    ])) : vue.createCommentVNode("", true)
   ], 10, _hoisted_1);
 }
 const Button = /* @__PURE__ */ _export_sfc(_sfc_main, [["render", _sfc_render]]);
@@ -70,6 +71,4 @@ const install = (app) => {
   });
 };
 const pxelement = { install };
-export {
-  pxelement as default
-};
+module.exports = pxelement;

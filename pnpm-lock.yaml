@@ -11,13 +11,13 @@ importers:
       '@esbuild-kit/cjs-loader':
         specifier: ^2.4.4
         version: 2.4.4
-      '@pxelement-ui/components':
+      '@pxelement/components':
         specifier: workspace:^
         version: link:packages/components
-      '@pxelement-ui/theme-chalk':
+      '@pxelement/theme-chalk':
         specifier: workspace:^
         version: link:packages/theme-chalk
-      '@pxelement-ui/utils':
+      '@pxelement/utils':
         specifier: workspace:^
         version: link:packages/utils
       '@tsconfig/node20':
@@ -59,6 +59,9 @@ importers:
       jsdom:
         specifier: ^24.0.0
         version: 24.0.0
+      pxelement:
+        specifier: workspace:^
+        version: link:packages/px-element
       sass:
         specifier: ^1.74.1
         version: 1.74.1
@@ -138,7 +141,13 @@ importers:
 
   packages/components: {}
 
-  packages/theme-chalk: {}
+  packages/px-element: {}
+
+  packages/theme-chalk:
+    devDependencies:
+      '@esbuild-kit/cjs-loader':
+        specifier: ^2.4.4
+        version: 2.4.4
 
   packages/utils: {}
 

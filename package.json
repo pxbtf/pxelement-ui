@@ -1,8 +1,4 @@
 {
-  "name": "pxelement-ui",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
   "scripts": {
     "dev": "pnpm -C examples dev",
     "test": "pnpm -C packages/components test",
@@ -17,9 +13,9 @@
   "license": "MIT",
   "devDependencies": {
     "@esbuild-kit/cjs-loader": "^2.4.4",
-    "@pxelement-ui/components": "workspace:^",
-    "@pxelement-ui/theme-chalk": "workspace:^",
-    "@pxelement-ui/utils": "workspace:^",
+    "@pxelement/components": "workspace:^",
+    "@pxelement/theme-chalk": "workspace:^",
+    "@pxelement/utils": "workspace:^",
     "@tsconfig/node20": "^20.1.2",
     "@types/gulp": "^4.0.17",
     "@types/gulp-autoprefixer": "^0.0.37",
@@ -33,6 +29,7 @@
     "gulp-autoprefixer": "^9.0.0",
     "gulp-sass": "^5.1.0",
     "jsdom": "^24.0.0",
+    "pxelement": "workspace:^",
     "sass": "^1.74.1",
     "sucrase": "^3.35.0",
     "ts-node": "^10.9.2",

@@ -1,8 +1,9 @@
 {
-  "name": "@pxelement-ui/components",
+  "name": "@pxelement/components",
   "version": "1.0.0",
   "description": "",
   "main": "index.ts",
+  "types": "type.d.ts",
   "scripts": {
     "test": "vitest",
     "build": "vite build"
@@ -17,17 +18,20 @@
   ],
   "exports": {
     ".": {
-      "require": "./dist/pxElement.mjs",
-      "import": "./dist/pxElement.js"
+      "require": "./dist/pxelement.mjs",
+      "import": "./dist/pxelement.js"
     },
     "./amd": {
-      "require": "./dist/pxElement.amd.js"
+      "require": "./dist/pxelement.amd.js"
     }
   },
   "author": {
     "name": "pxbtf",
     "email": "pxiou1997@163.com",
     "url": "https://github.com/pxbtf"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "repository": {
     "type": "git",

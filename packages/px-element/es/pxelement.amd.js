@@ -1,4 +1,4 @@
-var pxElement = function(exports, vue) {
+define(["vue"], function(vue) {
   "use strict";
   const buttonProps = {
     type: {
@@ -27,7 +27,7 @@ var pxElement = function(exports, vue) {
     }
   };
   const _sfc_main = vue.defineComponent({
-    name: "pxbutton",
+    name: "pxButton",
     props: buttonProps,
     emits: ["click"],
     setup(_, { emit }) {
@@ -71,7 +71,5 @@ var pxElement = function(exports, vue) {
     });
   };
   const pxelement = { install };
-  exports.default = pxelement;
-  Object.defineProperties(exports, { __esModule: { value: true }, [Symbol.toStringTag]: { value: "Module" } });
-  return exports;
-}({}, Vue);
+  return pxelement;
+});

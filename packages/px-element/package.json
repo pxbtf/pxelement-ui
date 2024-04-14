@@ -1,0 +1,45 @@
+{
+  "name": "pxelement",
+  "version": "1.0.2",
+  "description": "A Component Library for Vue 3",
+  "main": "./es/pxelement.mjs",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pxbtf/pxelement-ui/issues"
+  },
+  "keywords": [
+    "pxelement",
+    "element",
+    "component library",
+    "ui framework",
+    "ui",
+    "vue"
+  ],
+  "homepage": "https://pxbtf.github.io/",
+  "files": [
+    "packages.json",
+    "./es"
+  ],
+  "exports": {
+    ".": {
+      "require": "./es/pxelement.js",
+      "import": "./es/pxelement.mjs"
+    },
+    "./es": {
+      "require": "./es/pxelement.js",
+      "import": "./es/pxelement.mjs"
+    }
+  },
+  "author": {
+    "name": "pxbtf",
+    "email": "pxiou1997@163.com",
+    "url": "https://github.com/pxbtf"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pxbtf/pxelement-ui"
+  }
+}

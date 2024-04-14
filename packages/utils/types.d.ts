@@ -1,1 +1,1 @@
-declare module "@pxelement-ui/utils";
+declare module "@pxelement/utils";

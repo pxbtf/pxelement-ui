@@ -14,7 +14,7 @@ import { defineComponent } from "vue"
 import { buttonProps } from "./button";
 
 export default defineComponent({
-    name: "pxbutton",
+    name: "pxButton",
     props: buttonProps,
     emits: ["click"],
     setup(_, { emit }) {

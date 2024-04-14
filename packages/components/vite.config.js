@@ -16,24 +16,22 @@ export default defineConfig({
     "process.env.NODE_ENV": nodeEnv,
   },
   build: {
-    outDir: "dist",
+    outDir: "../px-element/es",
     minify: false,
     rollupOptions: {
       output: {
         globals: {
           vue: "Vue",
         },
-        dir: "dist",
-        format: "amd",
-        exports: "named",
+        dir: "../px-element/es",
       },
       external: ["vue"],
     },
     lib: {
       entry: "./index.ts",
-      name: "pxElement",
-      fileName: "pxElement",
-      formats: ["amd", "es", "umd", "cjs", "iife"],
+      name: "pxelement",
+      fileName: "pxelement",
+      formats: ["es", "cjs", "amd", "iife"],
     },
   },
 });
