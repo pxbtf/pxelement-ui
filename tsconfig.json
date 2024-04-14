@@ -2,6 +2,7 @@
   "files": [],
   "compilerOptions": {
     "esModuleInterop": true,
+    "declaration": true
   },
   "references": [
     {

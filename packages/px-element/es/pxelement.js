@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 const vue = require("vue");
 const buttonProps = {
   type: {
@@ -64,11 +65,11 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
   ], 10, _hoisted_1);
 }
 const Button = /* @__PURE__ */ _export_sfc(_sfc_main, [["render", _sfc_render]]);
-const components = [Button];
-const install = (app) => {
-  components.forEach((component) => {
+const withInstall = (component) => {
+  component.install = function(app) {
     app.component(component.name, component);
-  });
+  };
 };
-const pxelement = { install };
-module.exports = pxelement;
+const PxButton = withInstall(Button);
+exports.PxButton = PxButton;
+exports.buttonProps = buttonProps;

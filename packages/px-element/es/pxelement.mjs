@@ -63,13 +63,13 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
   ], 10, _hoisted_1);
 }
 const Button = /* @__PURE__ */ _export_sfc(_sfc_main, [["render", _sfc_render]]);
-const components = [Button];
-const install = (app) => {
-  components.forEach((component) => {
+const withInstall = (component) => {
+  component.install = function(app) {
     app.component(component.name, component);
-  });
+  };
 };
-const pxelement = { install };
+const PxButton = withInstall(Button);
 export {
-  pxelement as default
+  PxButton,
+  buttonProps
 };

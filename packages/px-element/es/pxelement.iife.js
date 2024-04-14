@@ -1,4 +1,4 @@
-var pxelement = function(vue) {
+var pxelement = function(exports, vue) {
   "use strict";
   const buttonProps = {
     type: {
@@ -64,12 +64,14 @@ var pxelement = function(vue) {
     ], 10, _hoisted_1);
   }
   const Button = /* @__PURE__ */ _export_sfc(_sfc_main, [["render", _sfc_render]]);
-  const components = [Button];
-  const install = (app) => {
-    components.forEach((component) => {
+  const withInstall = (component) => {
+    component.install = function(app) {
       app.component(component.name, component);
-    });
+    };
   };
-  const pxelement2 = { install };
-  return pxelement2;
-}(Vue);
+  const PxButton = withInstall(Button);
+  exports.PxButton = PxButton;
+  exports.buttonProps = buttonProps;
+  Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
+  return exports;
+}({}, Vue);

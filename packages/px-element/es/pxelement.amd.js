@@ -1,4 +1,4 @@
-define(["vue"], function(vue) {
+define(["exports", "vue"], function(exports, vue) {
   "use strict";
   const buttonProps = {
     type: {
@@ -64,12 +64,13 @@ define(["vue"], function(vue) {
     ], 10, _hoisted_1);
   }
   const Button = /* @__PURE__ */ _export_sfc(_sfc_main, [["render", _sfc_render]]);
-  const components = [Button];
-  const install = (app) => {
-    components.forEach((component) => {
+  const withInstall = (component) => {
+    component.install = function(app) {
       app.component(component.name, component);
-    });
+    };
   };
-  const pxelement = { install };
-  return pxelement;
+  const PxButton = withInstall(Button);
+  exports.PxButton = PxButton;
+  exports.buttonProps = buttonProps;
+  Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 });
