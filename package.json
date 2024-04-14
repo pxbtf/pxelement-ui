@@ -8,10 +8,15 @@
     "build:scss": "pnpm -C packages/theme-chalk start",
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs",
-    "docs:deploy": "bash ./docs/scripts/deploy.sh"
+    "docs:deploy": "bash ./docs/scripts/deploy.sh",
+    "prepare": "husky install",
+    "lint:lint-staged": "lint-staged",
+    "cz": "git-cz"
   },
   "license": "MIT",
   "devDependencies": {
+    "@commitlint/cli": "^19.2.2",
+    "@commitlint/config-conventional": "^19.2.2",
     "@esbuild-kit/cjs-loader": "^2.4.4",
     "@pxelement/components": "workspace:^",
     "@pxelement/theme-chalk": "workspace:^",
@@ -24,11 +29,15 @@
     "@vue/test-utils": "^2.4.5",
     "@vue/tsconfig": "^0.5.1",
     "@vueuse/core": "^10.9.0",
+    "commitizen": "^4.3.0",
+    "cz-git": "^1.9.1",
     "element-plus": "^2.6.3",
     "gulp": "^5.0.0",
     "gulp-autoprefixer": "^9.0.0",
     "gulp-sass": "^5.1.0",
+    "husky": "^8.0.0",
     "jsdom": "^24.0.0",
+    "lint-staged": "^15.2.2",
     "pxelement": "workspace:^",
     "sass": "^1.74.1",
     "sucrase": "^3.35.0",
@@ -38,5 +47,31 @@
     "vitepress": "^1.1.0",
     "vitest": "^1.4.0",
     "vue": "^3.4.21"
+  },
+  "lint-staged": {
+    "*.{js,ts}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{cjs,json}": [
+      "prettier --write"
+    ],
+    "*.{vue,html}": [
+      "eslint --fix",
+      "prettier --write",
+      "stylelint --fix"
+    ],
+    "*.{scss,css}": [
+      "stylelint --fix",
+      "prettier --write"
+    ],
+    "*.md": [
+      "prettier --write"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-git"
+    }
   }
 }
