@@ -18,12 +18,7 @@ function del(target, key) {
   delete target[key];
 }
 
-export {
-  isVue2,
-  isVue3,
-  set,
-  del
-};
+export { isVue2, isVue3, set, del };
 /*! Bundled license information:
 
 vitepress/lib/vue-demi.mjs:

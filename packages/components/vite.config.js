@@ -3,8 +3,7 @@ import { defineConfig } from "vite";
 import { fileURLToPath, URL } from "node:url";
 // 引入@vitejs/plugin-vue这个插件，让vite能够支持vue的处理
 import vue from "@vitejs/plugin-vue";
-const nodeEnv =
-  process.env.NODE_ENV === "production" ? '"production"' : '"development"';
+const nodeEnv = process.env.NODE_ENV === "production" ? '"production"' : '"development"';
 export default defineConfig({
   plugins: [vue()],
   reslove: {

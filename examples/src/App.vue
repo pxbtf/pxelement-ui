@@ -3,19 +3,18 @@ import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <template>
-    <div class="wrapper">
-      <nav>
-        <RouterLink to="/">Button</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-    <div>
-      <RouterView />
-    </div>
+  <div class="wrapper">
+    <nav>
+      <RouterLink to="/">Button</RouterLink>
+      <RouterLink to="/about">About</RouterLink>
+    </nav>
+  </div>
+  <div>
+    <RouterView />
+  </div>
 </template>
 
 <style scoped>
-
 nav {
   width: 100%;
   font-size: 12px;
