@@ -13,9 +13,9 @@
     :disabled="disabled"
     @click="clickHandle"
   >
-    <i v-if="icon" :class="`pxui-icon-${icon}`"></i>
+    <i v-if="icon" :class="`pxui-icon-${icon}`" />
     <span v-if="$slots.default">
-      <slot></slot>
+      <slot />
     </span>
   </button>
 </template>
@@ -25,7 +25,7 @@ import { defineComponent } from "vue";
 import { buttonProps } from "./button";
 
 export default defineComponent({
-  name: "pxButton",
+  name: "PxButton",
   props: buttonProps,
   emits: ["click"],
   setup(_, { emit }) {

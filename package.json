@@ -13,7 +13,8 @@
     "lint:lint-staged": "lint-staged",
     "cz": "git-cz",
     "lint:eslint": "eslint \"packages/**/*.{vue,jts,js}\" --fix",
-    "lint:prettier": "prettier --write \"**/*.{js,vue,ts,json,css,less,scss,vue,html,md}\""
+    "lint:prettier": "prettier --write \"**/*.{js,vue,ts,json,css,less,scss,vue,html,md}\"",
+    "lint": "pnpm lint:lint-staged & pnpm lint:eslint & pnpm lint:prettier"
   },
   "license": "MIT",
   "devDependencies": {
@@ -82,5 +83,8 @@
     "commitizen": {
       "path": "./node_modules/cz-git"
     }
+  },
+  "dependencies": {
+    "@element-plus/eslint-config": "^0.0.20240509"
   }
 }

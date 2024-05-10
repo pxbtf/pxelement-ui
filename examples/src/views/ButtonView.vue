@@ -2,69 +2,69 @@
   <div>
     <!-- 测试按钮组件 -->
     <div class="row">
-      <px-button>普通按钮</px-button>
-      <px-button type="primary">primary按钮</px-button>
-      <px-button type="success">success按钮</px-button>
-      <px-button type="info">info按钮</px-button>
-      <px-button type="danger">danger按钮</px-button>
-      <px-button type="warning">warning按钮</px-button>
+      <PxButton>普通按钮</PxButton>
+      <PxButton type="primary">primary按钮</PxButton>
+      <PxButton type="success">success按钮</PxButton>
+      <PxButton type="info">info按钮</PxButton>
+      <PxButton type="danger">danger按钮</PxButton>
+      <PxButton type="warning">warning按钮</PxButton>
     </div>
     <!-- 测试 plain 属性 -->
     <div class="row">
-      <px-button plain>普通按钮</px-button>
-      <px-button plain type="primary">primary按钮</px-button>
-      <px-button plain type="success">success按钮</px-button>
-      <px-button plain type="info">info按钮</px-button>
-      <px-button plain type="danger">danger按钮</px-button>
-      <px-button plain type="warning">warning按钮</px-button>
+      <PxButton plain>普通按钮</PxButton>
+      <PxButton plain type="primary">primary按钮</PxButton>
+      <PxButton plain type="success">success按钮</PxButton>
+      <PxButton plain type="info">info按钮</PxButton>
+      <PxButton plain type="danger">danger按钮</PxButton>
+      <PxButton plain type="warning">warning按钮</PxButton>
     </div>
     <!-- 测试 round 属性 -->
     <div class="row">
-      <px-button round>按钮</px-button>
-      <px-button round type="primary">primary按钮</px-button>
-      <px-button round type="success">success按钮</px-button>
-      <px-button plain round type="info">info按钮</px-button>
-      <px-button plain round type="danger">danger按钮</px-button>
-      <px-button plain round type="warning">warning按钮</px-button>
+      <PxButton round>按钮</PxButton>
+      <PxButton round type="primary">primary按钮</PxButton>
+      <PxButton round type="success">success按钮</PxButton>
+      <PxButton plain round type="info">info按钮</PxButton>
+      <PxButton plain round type="danger">danger按钮</PxButton>
+      <PxButton plain round type="warning">warning按钮</PxButton>
     </div>
     <!-- 测试 diabled 属性 -->
     <div class="row">
-      <px-button disabled>按钮</px-button>
-      <px-button disabled type="primary">primary按钮</px-button>
-      <px-button disabled type="success">success按钮</px-button>
-      <px-button disabled round type="info">info按钮</px-button>
-      <px-button disabled round type="danger">danger按钮</px-button>
-      <px-button disabled round type="warning">warning按钮</px-button>
+      <PxButton disabled>按钮</PxButton>
+      <PxButton disabled type="primary">primary按钮</PxButton>
+      <PxButton disabled type="success">success按钮</PxButton>
+      <PxButton disabled round type="info">info按钮</PxButton>
+      <PxButton disabled round type="danger">danger按钮</PxButton>
+      <PxButton disabled round type="warning">warning按钮</PxButton>
     </div>
     <!-- 测试 circle 属性 -->
     <div class="row">
-      <px-button round circle>好</px-button>
-      <px-button round circle type="primary">好</px-button>
-      <px-button round circle type="success">学</px-button>
-      <px-button plain round circle type="info">习</px-button>
-      <px-button plain round circle type="danger">前</px-button>
-      <px-button plain round circle type="warning">端</px-button>
+      <PxButton round circle>好</PxButton>
+      <PxButton round circle type="primary">好</PxButton>
+      <PxButton round circle type="success">学</PxButton>
+      <PxButton plain round circle type="info">习</PxButton>
+      <PxButton plain round circle type="danger">前</PxButton>
+      <PxButton plain round circle type="warning">端</PxButton>
     </div>
     <!-- 测试图标 -->
     <div class="row">
-      <px-button icon="milk-tea"></px-button>
-      <px-button type="primary" icon="camera">照相机</px-button>
-      <px-button type="success" icon="wind-power" circle></px-button>
-      <px-button type="info" icon="orange"></px-button>
-      <px-button type="danger" icon="goblet"></px-button>
-      <px-button type="warning" icon="cloudy"></px-button>
-      <px-button type="info" plain icon="milk-tea">奶茶</px-button>
+      <PxButton icon="milk-tea"></PxButton>
+      <PxButton type="primary" icon="camera">照相机</PxButton>
+      <PxButton type="success" icon="wind-power" circle></PxButton>
+      <PxButton type="info" icon="orange"></PxButton>
+      <PxButton type="danger" icon="goblet"></PxButton>
+      <PxButton type="warning" icon="cloudy"></PxButton>
+      <PxButton type="info" plain icon="milk-tea">奶茶</PxButton>
     </div>
     <!-- 测试事件 -->
     <div class="row">
-      <px-button type="primary" plain @click="handleClick('pxelement')">click</px-button>
+      <PxButton type="primary" plain @click="handleClick('pxelement')">click</PxButton>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import pxButton from './../../../packages/px-element/es/pxelement.mjs'
-console.log('组件样式', pxButton)
+// import { PxButton } from '../../../packages/px-element/es/pxelement.mjs';
+// console.log('组件样式', PxButton)
 
 const handleClick = (parms: string) => {
   console.log(parms)

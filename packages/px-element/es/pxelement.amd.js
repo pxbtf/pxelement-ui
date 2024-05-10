@@ -1,5 +1,10 @@
-define(["exports", "vue"], function (exports, vue) {
+define(["exports", "vue"], (exports, vue) => {
   "use strict";
+  const withInstall = (component) => {
+    component.install = function (app) {
+      app.component(component.name, component);
+    };
+  };
   const buttonProps = {
     type: {
       type: String,
@@ -27,7 +32,7 @@ define(["exports", "vue"], function (exports, vue) {
     },
   };
   const _sfc_main = vue.defineComponent({
-    name: "pxButton",
+    name: "PxButton",
     props: buttonProps,
     emits: ["click"],
     setup(_, { emit }) {
@@ -92,11 +97,6 @@ define(["exports", "vue"], function (exports, vue) {
     );
   }
   const Button = /* @__PURE__ */ _export_sfc(_sfc_main, [["render", _sfc_render]]);
-  const withInstall = (component) => {
-    component.install = function (app) {
-      app.component(component.name, component);
-    };
-  };
   const PxButton = withInstall(Button);
   exports.PxButton = PxButton;
   exports.buttonProps = buttonProps;

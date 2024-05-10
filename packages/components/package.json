@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.ts",
+  "module": "index.ts",
   "types": "type.d.ts",
   "scripts": {
     "test": "vitest",
@@ -16,15 +17,6 @@
   "files": [
     "/dist"
   ],
-  "exports": {
-    ".": {
-      "require": "./dist/pxelement.mjs",
-      "import": "./dist/pxelement.js"
-    },
-    "./amd": {
-      "require": "./dist/pxelement.amd.js"
-    }
-  },
   "author": {
     "name": "pxbtf",
     "email": "pxiou1997@163.com",
