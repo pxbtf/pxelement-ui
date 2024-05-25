@@ -26,7 +26,7 @@ import {
   cloneVNode,
   compatUtils,
   compile,
-  computed2 as computed,
+  computed,
   createApp,
   createBaseVNode,
   createBlock,
@@ -157,8 +157,8 @@ import {
   withKeys,
   withMemo,
   withModifiers,
-  withScopeId,
-} from "./chunk-ZNINO74Z.js";
+  withScopeId
+} from "./chunk-I4432YUE.js";
 export {
   BaseTransition,
   BaseTransitionPropsValidators,
@@ -318,6 +318,6 @@ export {
   withKeys,
   withMemo,
   withModifiers,
-  withScopeId,
+  withScopeId
 };
 //# sourceMappingURL=vue.js.map

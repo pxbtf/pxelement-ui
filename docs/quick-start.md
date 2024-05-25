@@ -14,9 +14,9 @@ outline: deep
 
 ```ts
 import { createApp } from "vue";
+import pxelement from "@pxelement/components";
 import App from "./App.vue";
-import pxelement from "@pxelement-ui/components";
-import "@pxelement-ui/theme-chalk/src/index.scss";
+import "@pxelement/theme-chalk/src/index.scss";
 const app = createApp(App);
 app.use(pxelement);
 ```
