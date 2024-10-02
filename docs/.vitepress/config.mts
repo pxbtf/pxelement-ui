@@ -19,7 +19,7 @@ export default defineConfig({
       },
       {
         text: "基础组件",
-        items: [{ text: "Button", link: "../components/PButton/base" }],
+        items: [{ text: "Button", link: "/components/PButton/base" },{ text: "Dialog", link: "/components/PDialog/base" }],
       },
     ],
 

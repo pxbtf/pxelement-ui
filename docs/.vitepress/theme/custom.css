@@ -4,9 +4,9 @@
   --vp-c-brand-2: #409effc9;
   --vp-c-indigo-3: #409eff;
   /* --vp-sidebar-width: 100px; */
-  --vp-layout-max-width: 1920px;
+  /* --vp-layout-max-width: 1920px; */
 }
 
-.content-container {
+/* .content-container {
   max-width: 1000px !important;
-}
+} */
