@@ -7,7 +7,9 @@
     "packages/components/**/*.ts",
     "packages/components/**/*.vue",
     "packages/theme-chalk/**/*.ts",
-    "packages/theme-chalk/script/build/gulpfile.js"
+    "packages/theme-chalk/script/build/gulpfile.js",
+    "packages/theme-chalk/script/utils/paths.js",
+    "packages/theme-chalk/gulpfile.js"
   ],
   "exclude": ["src/**/__tests__/*"],
   "compilerOptions": {

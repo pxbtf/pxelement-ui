@@ -1,16 +1,28 @@
 {
   "name": "@pxelement/theme-chalk",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
-  "main": "index.js",
+  "type": "module",
+  "main": "dist/index.css",
   "scripts": {
-    "build": "sass ./src/index.scss:index.css",
-    "start": "gulp --require @esbuild-kit/cjs-loader script/build/gilpfile.ts"
+    "build": "sass --no-source-map ./src/index.scss:dist/index.css",
+    "start": "gulp build"
   },
-  "keywords": [],
+  "keywords": [
+    "pxelement",
+    "theme-chalk"
+  ],
+  "files": [
+    "/dist",
+    "src"
+  ],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@esbuild-kit/cjs-loader": "^2.4.4"
+    "gulp": "^5.0.0",
+    "gulp-autoprefixer": "^9.0.0",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0"
   }
 }

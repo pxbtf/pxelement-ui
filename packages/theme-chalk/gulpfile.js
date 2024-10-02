@@ -1,11 +1,13 @@
 import { spawn } from "child_process";
 import { series, src, dest, task } from "gulp";
-import { componentPath } from "../utils/paths";
 import gulpSass from "gulp-sass";
 import autoprefixer from "gulp-autoprefixer";
 import dartSass from "sass";
-
-const run = async (command: string) => {
+import rename from "gulp-rename";
+// import cssmin from "gulp-cssmin";
+const componentPath = ".";
+const noElPrefixFile = /(index|base|display)/;
+const run = async (command) => {
   //cmd表示命令，args代表参数，如 rm -rf  rm就是命令，-rf就为参数
   const [cmd, ...args] = command.split(" ");
   return new Promise((resolve, reject) => {
@@ -22,17 +24,32 @@ const run = async (command: string) => {
 // 处理样式
 const buildStyle = () => {
   const sass = gulpSass(dartSass);
-  console.log("哈哈哈");
-
   return src(`${componentPath}/src/*.scss`)
     .pipe(sass.sync())
     .pipe(autoprefixer({ cascade: false }))
-    .pipe(dest(`${componentPath}/dist/lib/src`))
-    .pipe(dest(`${componentPath}/dist/es/src`));
+    .pipe(dest(`${componentPath}/dist/`));
 };
 
-const build: any = series(
+const buildComponentStyle = () => {
+  const sass = gulpSass(dartSass);
+  return (
+    src(`${componentPath}/src/components/*.scss`)
+      .pipe(sass.sync())
+      .pipe(autoprefixer({ cascade: false }))
+      // .pipe(cssmin())
+      .pipe(
+        rename((path) => {
+          if (!noElPrefixFile.test(path.basename)) {
+            path.basename = `px-${path.basename}`;
+          }
+        })
+      )
+      .pipe(dest(`${componentPath}/dist/`))
+  );
+};
+
+export const build = series(
   async () => run(`rm -rf ${componentPath}/dist`),
-  async () => buildStyle()
+  async () => buildStyle(),
+  async () => buildComponentStyle()
 );
-export default build;
