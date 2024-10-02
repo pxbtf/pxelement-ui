@@ -18,13 +18,11 @@
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from "vue";
+<script lang="ts" setup>
 import CardProps from "./card";
-export default defineComponent({
-  name: "PxCard",
-  props: CardProps,
-});
+
+defineOptions({ name: "PxCard" });
+defineProps(CardProps);
 </script>
 
 <style scoped></style>

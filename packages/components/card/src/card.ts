@@ -8,7 +8,7 @@ const cardProps = {
     type: Number,
     default: 0,
   },
-  imgHeigth: {
+  imgHeight: {
     type: Number,
     default: 0,
   },

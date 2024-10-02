@@ -71,8 +71,4 @@ const handleClick = (parms: string) => {
 }
 </script>
 
-<style scoped>
-.row {
-  padding: 20px;
-}
-</style>
+<style scoped></style>
