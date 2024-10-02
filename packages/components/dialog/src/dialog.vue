@@ -11,16 +11,16 @@
           </slot>
           <!-- 关闭按钮 -->
           <button class="pxui-dialog_headerbtn" @click="clickHandle">
-            <i class="pxui-icon-close"></i>
+            <i class="pxui-icon-close" />
           </button>
         </div>
         <!-- 中间内容部分 -->
         <div class="pxui-dialog_body">
-          <slot></slot>
+          <slot />
         </div>
         <!-- 底部部分 -->
         <div class="pxui-dialog_footer">
-          <slot v-if="$slots.footer" name="footer"></slot>
+          <slot v-if="$slots.footer" name="footer" />
         </div>
       </div>
     </div>

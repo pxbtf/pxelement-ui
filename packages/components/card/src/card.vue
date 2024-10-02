@@ -10,10 +10,10 @@
       {{ summary }}
     </div>
     <div v-else class="pxui-card-summary">
-      <slot></slot>
+      <slot />
     </div>
     <div class="pxui-card-footer">
-      <slot name="footer"></slot>
+      <slot name="footer" />
     </div>
   </div>
 </template>
