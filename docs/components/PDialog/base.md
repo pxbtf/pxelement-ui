@@ -2,24 +2,52 @@
 
 ## 如何使用
 
-```html
-<px-dialog v-model:visible="visible1" @close="() => (visible1 = false)"> 这是一个基本的对话框 </px-dialog>
-```
+<style>
+    .row button {
+     margin-right:20px;
+    }
+</style>
+
+<div class="row">
+<px-dialog width="60%" :visible="visible1" @close="() => (visible1 = false)">Visible1</px-dialog>
+<px-dialog width="30%" :visible="visible2" @close="() => (visible2 = false)">Visible2</px-dialog>
+<px-button @click="openVisible1">打开普通弹窗</px-button>
+<px-button type="success" @click="openVisible2">打开成功弹窗</px-button>
+</div>
+
+<script lang="ts" setup>
+  import { ref } from "vue";
+  const visible1 = ref(false);
+  const visible2 = ref(false);
+  const openVisible1 = () => {
+    visible1.value = true;
+  };
+  const openVisible2 = () => {
+    visible2.value = true;
+  };
+</script>
 
 ```html
-<px-dialog v-model:visible="visible2" title="温馨提示" width="30vw" top="40vh" @close="() => (visible2 = false)">
-  传递了 title、width、top 这三个 prop
-</px-dialog>
-```
+<template>
+  <div>
+    <px-dialog width="60%" :visible="visible1" @close="() => (visible1 = false)">Visible1</px-dialog>
+    <px-dialog width="30%" :visible="visible2" @close="() => (visible2 = false)">Visible2</px-dialog>
+    <px-button @click="openVisible1">打开普通弹窗</px-button>
+    <px-button type="success" @click="openVisible2">打开成功弹窗</px-button>
+  </div>
+</template>
 
-```html
-<px-dialog v-model:visible="visible3" @close="closeDialog3" top="30vh">
-  这是一个基本的对话框
-  <template #footer>
-    <Duyi-Button type="warning" @click="closeDialog3">取消</Duyi-Button>
-    <Duyi-Button type="primary" @click="closeDialog3">确定</Duyi-Button>
-  </template>
-</px-dialog>
+<script lang="ts" setup>
+  import { ref } from "vue";
+  const visible1 = ref(false);
+  const visible2 = ref(false);
+  const openVisible1 = () => {
+    visible1.value = true;
+  };
+  const openVisible2 = () => {
+    visible2.value = true;
+  };
+</script>
 ```
 
 ## 支持的属性
